@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examplel3gl.examen.AcceuilController">
+   <children>
+      <BorderPane prefHeight="431.0" prefWidth="625.0">
+         <top>
+            <AnchorPane prefHeight="41.0" prefWidth="625.0" style="-fx-background-color: #0A4969; dynamique.getChildren().removeAll(): ; dynamique.getChildren().setAll(fxml): ;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="fermer" fitHeight="54.0" fitWidth="41.0" layoutX="561.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../images/fermer.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="MenuBack" alignment="CENTER_RIGHT" layoutX="-3.0" layoutY="-3.0" prefHeight="43.0" prefWidth="95.0" text="MENU" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="menu" fitHeight="38.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/télécharger.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="MenuBack1" alignment="CENTER_RIGHT" layoutX="-4.0" layoutY="-3.0" prefHeight="42.0" prefWidth="95.0" text="MENU" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="menu1" fitHeight="45.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/télécharger.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="dynamique" prefHeight="390.0" prefWidth="601.0" style="-fx-background-color: blak;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="333.0" fitWidth="518.0" layoutX="53.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../images/se-initial-letter-gold-calligraphic-feminine-floral-hand-drawn-heraldic-monogram-antique-vintage-style-luxury-logo-design-premium-vector.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="slider" layoutX="-2.0" layoutY="42.0" prefHeight="389.0" prefWidth="173.0" style="-fx-background-color: #0A4969;">
+         <children>
+            <VBox alignment="TOP_RIGHT" layoutX="11.0" layoutY="68.0" prefHeight="283.0" prefWidth="139.0" spacing="6.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="68.0">
+               <children>
+                  <Button fx:id="homebtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#homeAction" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #0A4969;" text="Home" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ic1" fitHeight="36.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/icons8-home-100.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="produitbtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#produitAction" prefHeight="47.0" prefWidth="137.0" style="-fx-background-color: #0A4969;" text="Produit" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ic2" fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/icons8-stock-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="categoriebtn" alignment="TOP_LEFT" layoutX="10.0" layoutY="54.0" mnemonicParsing="false" onAction="#categorieAction" prefHeight="47.0" prefWidth="137.0" style="-fx-background-color: #0A4969;" text="Categorie" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ic3" fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/icons8-choice-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="statistiquebtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#statistiqueAction" prefHeight="42.0" prefWidth="162.0" style="-fx-background-color: #0A4969;" text="Statistique" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ic4" fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/icons8-analysis-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="extraire_ducmentbtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#extraire_ducmentAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #0A4969;" text="ExtraireDoc" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ic5" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/icons8-winrar-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

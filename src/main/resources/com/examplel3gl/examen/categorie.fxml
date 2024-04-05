@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examplel3gl.examen.CategoryController">
+   <children>
+      <Button fx:id="btnajouter" layoutX="97.0" layoutY="111.0" mnemonicParsing="false" onAction="#ajoutAction" text="Ajouter" />
+      <Button fx:id="btnmodifier" layoutX="222.0" layoutY="111.0" mnemonicParsing="false" onAction="#modifAction" prefHeight="25.0" prefWidth="75.0" text="Modifier" />
+      <Button fx:id="btnsupprimer" layoutX="356.0" layoutY="111.0" mnemonicParsing="false" onAction="#SupprimeAction" prefHeight="25.0" prefWidth="75.0" text="Supprimer" />
+      <Button fx:id="btneffacer" layoutX="487.0" layoutY="111.0" mnemonicParsing="false" onAction="#EffacerAction" prefHeight="25.0" prefWidth="75.0" text="effacer" />
+      <TextField fx:id="libelletxt" layoutX="239.0" layoutY="57.0" />
+      <TableView fx:id="tablefx" layoutX="60.0" layoutY="162.0" onMouseClicked="#charge" prefHeight="184.0" prefWidth="479.0">
+         <columns>
+            <TableColumn fx:id="idtable" prefWidth="157.33331298828125" text="id" />
+            <TableColumn fx:id="libelletable" prefWidth="208.00006103515625" text="libelle" />
+         </columns>
+      </TableView>
+      <TextField fx:id="idtxt" layoutX="362.0" layoutY="32.0" visible="false" />
+   </children>
+</AnchorPane>

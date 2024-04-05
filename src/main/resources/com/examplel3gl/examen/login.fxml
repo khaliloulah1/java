@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examplel3gl.examen.LoginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="guitview" fitHeight="414.0" fitWidth="230.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0">
+               <image>
+                  <Image url="@../../../../../../images/OIP.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="371.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="24.0" layoutY="143.0" prefHeight="23.0" prefWidth="84.0" text="login">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="logintext" layoutX="94.0" layoutY="139.0" prefHeight="26.0" prefWidth="173.0" promptText="login" />
+            <Label layoutX="26.0" layoutY="192.0" prefHeight="23.0" prefWidth="84.0" text="password">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordtext" layoutX="96.0" layoutY="186.0" prefHeight="26.0" prefWidth="173.0" promptText="password" />
+            <Button fx:id="se_connecter" layoutX="99.0" layoutY="255.0" mnemonicParsing="false" onAction="#LoginButtonOnAction" prefHeight="31.0" prefWidth="154.0" style="-fx-background-color: #2c0474;" text="Se connecter" textFill="WHITE" />
+            <Label layoutX="46.0" layoutY="57.0" prefHeight="67.0" prefWidth="261.0" style="-fx-text-fill: #2c0474;" text="Page de connection" textFill="#2c0474" underline="true">
+               <font>
+                  <Font name="Blackadder ITC" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="sinscrire" layoutX="99.0" layoutY="304.0" mnemonicParsing="false" onAction="#registerbuttonAction" prefHeight="31.0" prefWidth="154.0" style="-fx-background-color: #2c0474;" text="S'inscrire" textFill="WHITE" />
+            <Label fx:id="loginalert" layoutX="81.0" layoutY="223.0" prefHeight="23.0" prefWidth="217.0" textAlignment="CENTER" textFill="#e60d0d">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
