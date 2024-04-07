@@ -3,34 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                //
+                sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Test') {
-            steps {
-                //
-            }
-        }
-        stage('Deploy') {
-            steps {
-                //
-            }
-        }
-    }
-}
-pipeline {
-    agent any
-    environment {
-        BRANCHE_DEV = 'origin/develop'
-        BRANCHE_PROD = 'origin/main'
-        NEXUS_DOCKER_REGISTRY = "http://prod.local:5003"
-        DOCKER_IMAGE_NAME = "api-demo"
-        DOCKER_IMAGE_TAG = "prod.local:5003"
-    }
-}
-stage('Checkout') {
-    steps {
-        checkout scm
-        echo 'Pulling... ' + env.GIT_BRANCH
     }
 }
