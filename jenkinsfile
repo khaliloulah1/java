@@ -12,8 +12,8 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                sh 'mvn test'
-            }
+                withMaven(traceability: true) {    sh 'mvn test'
+            }}
         }
 
 
