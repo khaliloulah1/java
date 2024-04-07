@@ -10,16 +10,12 @@ pipeline {
                 }
             }
         }
-        stage('Unit Tests') {
+        stage('Tests') {
             steps {
-                sh 'cd <path_to_test_reports> && cp *.xml $WORKSPACE'
+                sh 'mvn test'
             }
         }
-        post {
-            always {
-                // Publish JUnit test results
-                junit '**/test-results/*.xml'
-            }
+
 
         stage('Deploy') {
             steps {
@@ -30,4 +26,4 @@ pipeline {
 
 
 
-    }}}
+    }}
