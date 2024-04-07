@@ -16,7 +16,7 @@ pipeline {
                 }            }
         }
         stage('Integration') {
-            junit 'test-results.xml'
+            junit 'pom.xml'
         }
 
         stage('Deploy') {
