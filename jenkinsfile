@@ -15,9 +15,7 @@ pipeline {
                 withMaven(traceability: true) {
                 }            }
         }
-        stage('Integration') {
-            junit 'pom.xml'
-        }
+
 
         stage('Deploy') {
             steps {
