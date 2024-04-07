@@ -12,10 +12,14 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-                junit 'pom.xml'
+                sh 'cd <path_to_test_reports> && cp *.xml $WORKSPACE'
             }
         }
-
+        post {
+            always {
+                // Publish JUnit test results
+                junit '**/test-results/*.xml'
+            }
 
         stage('Deploy') {
             steps {
@@ -26,4 +30,4 @@ pipeline {
 
 
 
-    }}
+    }}}
