@@ -3,10 +3,11 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
-
+    stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                withMaven(traceability: true) {
+                }
             }
         }
         stage('Test') {
@@ -25,19 +26,12 @@ pipeline {
             }
         }
 
+
         node {
-
-            git url: 'https://github.com/spring-projects/spring-petclinic.git'
-
-
-            env.PATH = "${tool 'M3'}/bin:${env.PATH}"
-
-            configFileProvider(
-                    [configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
-                sh 'mvn -s $MAVEN_SETTINGS clean package'
+            stage('Build') {
+                withMaven(traceability: true) {
+                }
             }
 
         }
-
-
-}
+    }}
