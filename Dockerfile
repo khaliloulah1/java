@@ -5,7 +5,7 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copiez le fichier JAR de votre application dans le conteneur
-COPY target/mon-application.jar .
+COPY target/mon_image.jar .
 
 # Exposez le port sur lequel votre application écoute
 EXPOSE 8080
