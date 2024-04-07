@@ -10,19 +10,14 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Unit Tests') {
             steps {
                 withMaven(traceability: true) {
-                }
-            }
-            post {
-                always {
-                    withMaven(traceability: true) {
-                    }
-                }
-            }
+
+                    sh 'mvn test'  // Exécute les tests unitaires avec Maven
+            }}
         }
-        stage('Deliver') {
+        stage('Deploy') {
             steps {
                 withMaven(traceability: true) {
                 }
