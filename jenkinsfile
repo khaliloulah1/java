@@ -13,9 +13,9 @@ pipeline {
         stage('Tests') {
             steps {
                 withMaven(traceability: true) {
+                }
             }
         }
-
 
         stage('Deploy') {
             steps {
