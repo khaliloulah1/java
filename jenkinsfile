@@ -10,17 +10,15 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Unit Tests') {
             steps {
                 withMaven(traceability: true) {
-
                 }            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
         }
+        stage('Integration') {
+            junit 'test-results.xml'
+        }
+
         stage('Deploy') {
             steps {
                 withMaven(traceability: true) {
