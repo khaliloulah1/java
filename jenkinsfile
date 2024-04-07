@@ -1,14 +1,24 @@
 pipeline {
     agent any
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
+
+            environment {
+                BRANCHE_DEV = 'origin/develop'
+                BRANCHE_PROD = 'origin/main'
+                NEXUS_DOCKER_REGISTRY = "http://prod.local:5003"
+                DOCKER_IMAGE_NAME = "api-demo"
+                DOCKER_IMAGE_TAG = "prod.local:5003"
             }
-        }
-        stage('Build'){
-            def mvnHome = tool name: 'Apache Maven 3.6.0', type: 'maven'
-            sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
+
+    stage('Checkout') {
+        steps {
+            checkout scm
+            echo 'Pulling... ' + env.GIT_BRANCH
         }
     }
+    stage('Tests') {
+        steps {
+            sh 'mvn test'
+        }
+    }
+
 }
