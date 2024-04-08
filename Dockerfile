@@ -5,10 +5,10 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copiez le fichier JAR de votre application dans le conteneur
-COPY target/mon-application.jar .
+COPY target/mon-javafx.jar .
 
 # Exposez le port sur lequel votre application écoute
 EXPOSE 8080
 
 # Commande pour démarrer l'application
-CMD ["java", "-jar", "mon-application.jar"]
+CMD ["java", "-jar", "mon-javafx.jar"]
