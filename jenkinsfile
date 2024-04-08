@@ -7,9 +7,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                withMaven(traceability: true) {
 
-                    sh 'mvn -B -DskipTests clean package'}
+                    sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
