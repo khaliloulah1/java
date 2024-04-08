@@ -1,27 +1,23 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
+
     stages {
         stage('Build') {
             steps {
-                sh 'mvn build'
+                echo 'Building..'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
+                echo 'Testing..'
                 sh 'mvn test'
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
         }
-        stage('Deliver') {
+        stage('Deploy') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                echo 'Deploying....'
+                // Ajoutez ici vos commandes de déploiement
             }
         }
     }
