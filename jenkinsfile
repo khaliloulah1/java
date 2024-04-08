@@ -6,16 +6,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                withMaven(traceability: true) {
-                }
+                sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Tests') {
+        stage('Test') {
             steps {
-                withMaven(traceability: true) {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
+
 
         stage('Deploy') {
             steps {
