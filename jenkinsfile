@@ -3,8 +3,7 @@ import java.nio.file.Path
 pipeline {
     agent any
     environment{
-         PATH= "C:\\Users\\PC\\Downloads\\apache-maven-3.9.6\\bin:$PATH"
-
+        export PATH=/usr/local/apache-maven-3.x.y/bin:$PATH
     }
 
     stages {
@@ -12,7 +11,7 @@ pipeline {
             steps {
 
                 echo 'Building..'
-                sh 'mvn -Dtest=MainPageTests test'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
