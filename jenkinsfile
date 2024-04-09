@@ -3,13 +3,12 @@
 pipeline {
     agent any
     environment{
-        // PATH="/usr/local/apache-maven-3.x.y/bin:$PATH"
     }
 
     stages {
         stage('Build') {
             steps {
-
+                echo 'Build....'
 
                 sh 'mvn clean install'
             }
