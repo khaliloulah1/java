@@ -1,16 +1,16 @@
-import java.nio.file.Path
+
 
 pipeline {
     agent any
     environment{
-        PATH="/usr/local/apache-maven-3.x.y/bin:$PATH"
+        // PATH="/usr/local/apache-maven-3.x.y/bin:$PATH"
     }
 
     stages {
         stage('Build') {
             steps {
 
-                echo 'Building..'
+
                 sh 'mvn clean install'
             }
         }
