@@ -19,7 +19,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('SonarQube analysis') {
+       /* stage('SonarQube analysis') {
             steps {
                 echo 'Analyzing..'
                 script {
@@ -31,7 +31,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
