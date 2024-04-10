@@ -1,23 +1,12 @@
 
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
-
-    stage('MVN Install') {
-        steps {
-            script {
-                dir("${WORKSPACE}") {
-                    sh "mvn compile"
-                }
-            }
-        }
-    }
 
     stages {
         stage('Build') {
             steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/khaliloulah1/java']])
+
                 sh 'mvn -B -DskipTests clean package'
             }
         }
