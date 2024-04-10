@@ -3,9 +3,9 @@ module com.examplel3gl.examen {
     requires javafx.fxml;
     requires java.sql;
     requires org.apache.pdfbox;
-    requires mysql.connector.j;
-    requires poi.ooxml;
     requires poi;
+    requires poi.ooxml;
+    requires mysql.connector.j;
 
 
     opens com.examplel3gl.examen to javafx.fxml;
