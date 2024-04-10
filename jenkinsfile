@@ -3,7 +3,7 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps {
+            steps µ{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/khaliloulah1/java']])
 
                 sh 'mvn -B -DskipTests clean package'
