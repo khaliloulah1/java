@@ -5,6 +5,17 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
+
+    stage('MVN Install') {
+        steps {
+            script {
+                dir("${WORKSPACE}") {
+                    sh "mvn compile"
+                }
+            }
+        }
+    }
+
     stages {
         stage('Build') {
             steps {
